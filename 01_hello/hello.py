@@ -1,45 +1,40 @@
 #!/usr/bin/env python3
 """
-Author : zshi <zshi@localhost>
-Date   : 2023-01-16
-Purpose: Say Hello
+Author : amedeiros <amedeiros@localhost>
+Date   : 2023-02-04
+Purpose: Rock the Casbah
 """
 
 import argparse
 
 
+# --------------------------------------------------
 def get_args():
     """Get command-line arguments"""
 
     parser = argparse.ArgumentParser(
-        description='hello project',
+        description='Rock the Casbah',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('-n',
+    parser.add_argument('-a',
                         '--name',
-                        help='A named string argument',
+                        help='name to greet',
                         metavar='name',
                         type=str,
                         default='World')
-
     return parser.parse_args()
 
 
 # --------------------------------------------------
-
-
 def main():
-    """say hello"""
+    """Make a jazz noise here"""
 
     args = get_args()
-    word = args.name
-    # print("test git")
-    
-    print(f"Hello, {word}!")
+    name = args.name
+    print(f'Hello {name}!')
+
 
 
 # --------------------------------------------------
 if __name__ == '__main__':
     main()
-
-
