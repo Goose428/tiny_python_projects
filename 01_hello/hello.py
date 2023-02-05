@@ -16,7 +16,7 @@ def get_args():
         description='Rock the Casbah',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('-a',
+    parser.add_argument('-n',
                         '--name',
                         help='name to greet',
                         metavar='name',
@@ -31,10 +31,9 @@ def main():
 
     args = get_args()
     name = args.name
-    print(f'Hello {name}!')
-
-
-
+    print(f'Hello, {name}!')
 # --------------------------------------------------
 if __name__ == '__main__':
+
     main()
+    
